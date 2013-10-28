@@ -6,12 +6,6 @@ grails.project.target.level = 1.6
 grails.project.source.level = 1.6
 grails.server.port.http = 8989
 
-TOKEN='repos'
-branchInfo = 'svn info'.execute() | 'grep ^URL'.execute()
-def match = branchInfo.text =~ /.+${TOKEN}\/(.+)$/
-grails.work.dir = "work_${match[0][1]}"
-println "Working dir = ${grails.work.dir}!!!!"
-
 //grails.project.war.file = "target/${appName}-${appVersion}.war"
 
 // uncomment (and adjust settings) to fork the JVM to isolate classpaths
